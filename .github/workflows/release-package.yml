@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Publish Cosmic UI
 
 on:
   release:
@@ -8,18 +8,7 @@ on:
     tags: ["v*"]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install
-      - run: npm run build
-
-  publish-gpr:
-    needs: build
+  publish:
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -30,8 +19,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: npm install
+      - run: npm install --no-fund
       - run: npm run build
-      - run: npm publish
+      - run: npm publish --registry=https://npm.pkg.github.com --access restricted
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
