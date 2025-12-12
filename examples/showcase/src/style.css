@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme */
+  --background: 220 23% 97%;
+  --foreground: 222 47% 12%;
+  --muted: 220 14% 92%;
+  --muted-foreground: 220 8% 46%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 12%;
+  --border: 220 15% 80%;
+  --input: 220 15% 80%;
+  --primary: 222 89% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 174 80% 44%;
+  --secondary-foreground: 240 7% 7%;
+  --accent: 260 89% 68%;
+  --accent-foreground: 222 47% 12%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 222 89% 53%;
+  --radius: 12px;
+}
+
+.dark {
+  --background: 228 15% 8%;
+  --foreground: 210 40% 98%;
+  --muted: 217 33% 18%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 225 16% 10%;
+  --popover-foreground: 210 40% 98%;
+  --card: 225 14% 11%;
+  --card-foreground: 210 40% 98%;
+  --border: 220 15% 25%;
+  --input: 220 15% 25%;
+  --primary: 174 80% 54%;
+  --primary-foreground: 240 7% 7%;
+  --secondary: 242 82% 60%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 200 75% 60%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 174 80% 54%;
+  --radius: 12px;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.glass {
+  background: radial-gradient(circle at 10% 20%, rgba(94, 234, 212, 0.12), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(129, 140, 248, 0.16), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+}

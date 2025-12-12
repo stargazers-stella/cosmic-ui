@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@stargazers-stella/cosmic-ui": ["../../src"]
+    },
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "outDir": "./.tsbuild"
+  },
+  "include": ["src", "vite.config.ts"]
+}
