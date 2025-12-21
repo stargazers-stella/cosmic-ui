@@ -22,18 +22,9 @@ Add your images to `docs/screenshots/` and replace these placeholders.
 - UI primitives: Radix UI (`@radix-ui/*`)
 - Styling utilities: `class-variance-authority`, `clsx`, `tailwind-merge`
 - Icons/toasts: `lucide-react`, `sonner`
-- CI/publishing: GitHub Actions -> GitHub Packages (`npm.pkg.github.com`)
+- Publishing: npmjs (`https://registry.npmjs.org/`)
 
 ## Install
-This package is configured for GitHub Packages (`npm.pkg.github.com`).
-
-1) Add an `.npmrc` (project or user-level):
-```ini
-@stargazers-stella:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-```
-
-2) Install:
 ```sh
 npm install @stargazers-stella/cosmic-ui
 ```
