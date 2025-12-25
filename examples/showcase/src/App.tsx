@@ -663,10 +663,16 @@ function OverlayView({
                     System Configuration
                   </DialogTitle>
                   <DialogDescription>
-                    Configure your deployment settings and preferences. Changes
-                    apply immediately.
+                    Example dialog demonstrating form controls and modal interactions.
                   </DialogDescription>
                 </DialogHeader>
+                <Alert className="border-dashed">
+                  <Sparkles className="h-4 w-4" />
+                  <AlertTitle>Demo Mode</AlertTitle>
+                  <AlertDescription>
+                    This is a showcase example. Changes made here are for demonstration only and won't affect the actual site.
+                  </AlertDescription>
+                </Alert>
                 <div className="space-y-4 py-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Project Name</label>
