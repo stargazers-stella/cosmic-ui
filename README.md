@@ -85,3 +85,14 @@ npm run build
 ```
 
 Output goes to `dist/` (`dist/index.js`, `dist/index.cjs`, `dist/index.d.ts`).
+
+## Running Examples
+To view the component showcase:
+
+```sh
+cd examples/showcase
+npm install
+npm run dev
+```
+
+This starts a Vite dev server (usually at http://localhost:5173) showing all cosmic-ui components in action.
