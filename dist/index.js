@@ -371,7 +371,6 @@ function useUncontrolledState({
 function isFunction(value) {
   return typeof value === "function";
 }
-var SYNC_STATE = Symbol("RADIX:SYNC_STATE");
 
 // node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
 import * as React13 from "react";
@@ -424,7 +423,7 @@ function createSlotClone(ownerName) {
   SlotClone.displayName = `${ownerName}.SlotClone`;
   return SlotClone;
 }
-var SLOTTABLE_IDENTIFIER = Symbol("radix.slottable");
+var SLOTTABLE_IDENTIFIER = /* @__PURE__ */ Symbol("radix.slottable");
 function isSlottable(child) {
   return React9.isValidElement(child) && typeof child.type === "function" && "__radixId" in child.type && child.type.__radixId === SLOTTABLE_IDENTIFIER;
 }
@@ -493,7 +492,7 @@ var Primitive = NODES.reduce((primitive, node) => {
     const { asChild, ...primitiveProps } = props;
     const Comp = asChild ? Slot2 : node;
     if (typeof window !== "undefined") {
-      window[Symbol.for("radix-ui")] = true;
+      window[/* @__PURE__ */ Symbol.for("radix-ui")] = true;
     }
     return /* @__PURE__ */ jsx7(Comp, { ...primitiveProps, ref: forwardedRef });
   });
@@ -2451,7 +2450,7 @@ var DropdownMenuSubContent = React30.forwardRef(({ className, ...props }, ref) =
   {
     ref,
     className: cn(
-      "z-50 min-w-[8rem] overflow-hidden rounded-lg border border-border bg-popover p-1 text-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out",
+      "z-50 min-w-[8rem] w-auto overflow-hidden rounded-lg border border-border bg-popover p-1 text-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out",
       className
     ),
     ...props
@@ -2464,7 +2463,7 @@ var DropdownMenuContent = React30.forwardRef(({ className, sideOffset = 6, ...pr
     ref,
     sideOffset,
     className: cn(
-      "z-50 min-w-[10rem] overflow-hidden rounded-lg border border-border bg-popover p-1 text-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out",
+      "z-50 min-w-[10rem] w-auto overflow-hidden rounded-lg border border-border bg-popover p-1 text-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out",
       className
     ),
     ...props
@@ -2603,7 +2602,7 @@ var SelectContent = React32.forwardRef(({ className, children, position = "poppe
   {
     ref,
     className: cn(
-      "relative z-50 min-w-[10rem] overflow-hidden rounded-lg border border-border bg-popover text-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out",
+      "relative z-50 min-w-[10rem] w-auto overflow-hidden rounded-lg border border-border bg-popover text-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out",
       position === "popper" && "translate-y-1",
       className
     ),
@@ -2611,7 +2610,16 @@ var SelectContent = React32.forwardRef(({ className, children, position = "poppe
     ...props,
     children: [
       /* @__PURE__ */ jsx16(SelectPrimitive.ScrollUpButton, { className: "flex items-center justify-center py-1", children: /* @__PURE__ */ jsx16(ChevronUp, { className: "h-4 w-4" }) }),
-      /* @__PURE__ */ jsx16(SelectPrimitive.Viewport, { className: "p-1", children }),
+      /* @__PURE__ */ jsx16(
+        SelectPrimitive.Viewport,
+        {
+          className: cn(
+            "p-1",
+            position === "popper" && "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+          ),
+          children
+        }
+      ),
       /* @__PURE__ */ jsx16(SelectPrimitive.ScrollDownButton, { className: "flex items-center justify-center py-1", children: /* @__PURE__ */ jsx16(ChevronDown, { className: "h-4 w-4" }) })
     ]
   }
