@@ -4,9 +4,14 @@ Lightweight, themeable React UI primitives built for Tailwind-based apps: Button
 
 ## Screenshots
 
-![Component gallery](docs/screenshots/gallery.png)
-![Dialog + dropdown](docs/screenshots/dialog-dropdown.png)
-![Theme tokens (light/dark)](docs/screenshots/theme-tokens.png)
+<p align="center">
+  <img src="docs/screenshots/gallery.png" width="65%" alt="Component gallery" />
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/dialog-dropdown.png" width="48%" alt="Dialog + dropdown" />
+  <img src="docs/screenshots/theme-tokens.png" width="48%" alt="Theme tokens (light/dark)" />
+</p>
 
 ## What You Get
 
