@@ -9,6 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script type="module">
+      if (import.meta.env.PROD) {
+        const gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-7W6TE9X0MB";
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-7W6TE9X0MB");
+      }
+    </script>
     <title>Cosmic UI Showcase</title>
   </head>
   <body class="bg-background text-foreground antialiased">
