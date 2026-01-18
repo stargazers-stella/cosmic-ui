@@ -1,6 +1,13 @@
 # Cosmic UI
 
-Lightweight, themeable React UI primitives built for Tailwind-based apps: Buttons, Cards, Badges, Dialogs, Selects, Dropdown menus, Tables, and more. Styling is driven by design tokens (CSS variables) so you can swap themes without rewriting components.
+[![npm](https://img.shields.io/npm/v/@stargazers-stella/cosmic-ui?color=0ea5e9&label=npm&logo=npm)](https://www.npmjs.com/package/@stargazers-stella/cosmic-ui)
+[![license](https://img.shields.io/github/license/stargazers-stella/cosmic-ui?color=22c55e)](LICENSE)
+[![build](https://img.shields.io/github/actions/workflow/status/stargazers-stella/cosmic-ui/pages.yml?branch=main&label=demo%20build)](https://github.com/stargazers-stella/cosmic-ui/actions/workflows/pages.yml)
+[![demo](https://img.shields.io/badge/demo-live-6366f1)](https://stargazers-stella.github.io/cosmic-ui/)
+
+Minimal, themeable React UI primitives for Tailwind-based apps. Powered by design tokens (CSS variables) so you can swap themes without rewriting components.
+
+Tags: React • Tailwind • Radix UI • TypeScript • Vite
 
 ## Screenshots
 
