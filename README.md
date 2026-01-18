@@ -1,3 +1,5 @@
+<div align="center">
+
 # Cosmic UI
 
 [![npm](https://img.shields.io/npm/v/@stargazers-stella/cosmic-ui?color=0ea5e9&label=npm&logo=npm)](https://www.npmjs.com/package/@stargazers-stella/cosmic-ui)
@@ -8,6 +10,8 @@
 Minimal, themeable React UI primitives for Tailwind-based apps. Powered by design tokens (CSS variables) so you can swap themes without rewriting components.
 
 Tags: React • Tailwind • Radix UI • TypeScript • Vite
+
+</div>
 
 ## Screenshots
 
