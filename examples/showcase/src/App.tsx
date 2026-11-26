@@ -227,6 +227,7 @@ function App() {
               <Button
                 variant={viewMode === "themes" ? "secondary" : "ghost"}
                 size="sm"
+                data-demo-action="compare_themes"
                 onClick={() => setViewMode("themes")}
                 className="gap-2 text-xs"
               >

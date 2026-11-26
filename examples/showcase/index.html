@@ -10,25 +10,20 @@
       rel="stylesheet"
     />
     <script type="module">
-      if (import.meta.env.PROD) {
-        const gtagScript = document.createElement("script");
-        gtagScript.async = true;
-        gtagScript.src =
-          "https://www.googletagmanager.com/gtag/js?id=G-7W6TE9X0MB";
-        document.head.appendChild(gtagScript);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-7W6TE9X0MB");
+      if (import.meta.env.PROD && location.origin === "https://stargazers-stella.github.io") {
+        const script = document.createElement("script");
+        script.src = "https://naxe.dev/analytics/portfolio.js";
+        script.referrerPolicy = "no-referrer";
+        document.head.appendChild(script);
       }
     </script>
     <title>Cosmic UI Showcase</title>
   </head>
   <body class="bg-background text-foreground antialiased">
     <div id="root"></div>
+    <label hidden data-public-project="cosmic-ui" data-analytics-preference>
+      <input type="checkbox"> Allow Google Analytics
+    </label>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
